@@ -6,7 +6,7 @@
 
 <hr>
 
-  <a href="https://github.com/diego-riosp/electricity-and-magnetism-202302/releases/latest">![example1](https://img.shields.io/badge/slides-latest_version-brightgreen.svg?style=for-the-badge&logo=github)</a>
+  <a href="https://github.com/diego-riosp/electricity-and-magnetism-202401/releases/latest">![example1](https://img.shields.io/badge/slides-latest_version-brightgreen.svg?style=for-the-badge&logo=github)</a>
 
 </div>
 
