@@ -17,7 +17,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
-        - name: Compile First Workshop
+      - name: Compile First Workshop
         uses: xu-cheng/latex-action@v2
         with:
           root_file: workshop01.tex
