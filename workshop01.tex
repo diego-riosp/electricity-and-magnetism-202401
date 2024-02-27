@@ -1,0 +1,102 @@
+%Tipo de documento:
+\documentclass[letterpaper]{article}
+\usepackage{geometry}
+\geometry{
+papersize = {215mm, 330mm},
+headsep = 0.2cm,
+head = 3cm,
+top = 1.5cm,
+bottom = 2.3cm,
+left = 1.3cm,
+right = 1.3cm,
+foot = 1.5cm,
+includehead,
+includefoot,
+}
+
+%Paquetes:
+\renewcommand\refname{Referencias}
+\usepackage[T1]{fontenc}
+\usepackage[spanish, es-noshorthands]{babel}
+\usepackage{textcomp}
+\usepackage{lastpage}
+\usepackage{framed}
+\usepackage{float}
+\usepackage{multirow, array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\usepackage{chngcntr}
+\usepackage{multicol}
+\title{\ttitle}
+\usepackage[maxbibnames=200, sorting=none, backend=bibtex]{biblatex}
+\addbibresource{Referencias.bib}
+\usepackage{hyperref}
+\hypersetup{urlcolor=blue, colorlinks=true}
+%Extensiones admitidas:
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\newcommand{\pdfgraphics}{\DeclareGraphicsExtensions{.png,.pdf,.jpg}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{B}[1]{>{\centering\arraybackslash}b{#1}}
+
+
+\setlength{\parindent}{0pt}
+%Espacio entre líneas:
+\linespread{1.2}
+
+\def\hs{\hspace{0.1cm}}
+
+
+%Desarrollo del documento:
+\title{Estadística}
+\author{Diego Ríos}
+
+\usepackage[table]{xcolor}
+\definecolor{black}{rgb}{0.0, 0.0, 0.0}
+\renewcommand{\arrayrulewidth}{0.8pt}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+% types
+\def\informative{Informativa \fcolorbox{black}{black}{\color{black}{MM}} \,\, Desarrollo \fcolorbox{black}{white}{\color{white}{MM}} \,\, Control \fcolorbox{black}{white}{\color{white}{MM}} \,\, Laboratorio \fcolorbox{black}{white}{\color{white}{MM}}}
+\def\development{Informativa \fcolorbox{black}{white}{\color{white}{MM}} \,\, Desarrollo \fcolorbox{black}{black}{\color{black}{MM}} \,\, Control \fcolorbox{black}{white}{\color{white}{MM}} \,\, Laboratorio \fcolorbox{black}{white}{\color{white}{MM}}}
+\def\control{Informativa \fcolorbox{black}{white}{\color{white}{MM}} \,\, Desarrollo \fcolorbox{black}{white}{\color{white}{MM}} \,\, Control \fcolorbox{black}{black}{\color{black}{MM}} \,\, Laboratorio \fcolorbox{black}{white}{\color{white}{MM}}}
+\def\laboratory{Informativa \fcolorbox{black}{white}{\color{white}{MM}} \,\, Desarrollo \fcolorbox{black}{white}{\color{white}{MM}} \,\, Control \fcolorbox{black}{white}{\color{white}{MM}} \,\, Laboratorio \fcolorbox{black}{black}{\color{black}{MM}}}
+
+\arrayrulecolor{black}
+
+\chead{
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|m{1.9cm}|M{11.9cm}|m{3.7cm}|}
+\hline \vspace{0.1em}
+\multirow{4}{*}{\includegraphics[scale=0.045]{logo.png}
+} & \multirow{2}{*}{\textbf{\topic}} & {Curso: \curse} \\ \cline{3-3} 
+                  &                                               & Profesor: Diego Ríos \\ \cline{2-3} 
+                  & \multirow{2}{*}{\textbf{UNIVERSIDAD DE ANTIOQUIA}}                                              & Fecha: \date \\ \cline{3-3} 
+                  &                                       & Página: \thepage \, de \pageref*{LastPage} \\ \hline
+\end{tabular}
+}
+
+\cfoot{\raggedleft \color{black!70}{“Yo... un universo de \'atomos, un \'atomo en el universo.” \\
+-Feynman}
+{\raggedright \begin{picture}(0,0) 
+\put(-530,0){\includegraphics[scale = 0.2]{CC.png}} 
+\end{picture}}
+}
+
+\begin{document}
+	
+	\input{info-workshop01}
+	\input{print-info-workshop01}
+	\input{typing-workshop01}
+
+\end{document}
