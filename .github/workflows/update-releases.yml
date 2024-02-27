@@ -34,13 +34,24 @@ jobs:
           release_name: Release v${{ steps.date.outputs.date }}
           draft: false
           prerelease: false
-      - name: Upload Release Asset
-        id: upload-release-asset 
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} 
-          asset_path: ./main.pdf ./workshop01.pdf
-          asset_name: lectures-slides-v${{ steps.date.outputs.date }}.pdf first-workshop.pdf
-          asset_content_type: pdf
+      - name: Upload Release Asset Slides
+          id: upload-release-asset-slides 
+          uses: actions/upload-release-asset@v1
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          with:
+            upload_url: ${{ steps.create_release.outputs.upload_url }} 
+            asset_path: ./main.pdf
+            asset_name: lectures-slides-v${{ steps.date.outputs.date }}.pdf
+            asset_content_type: pdf
+        
+      - name: Upload Release Asset Workshop
+          id: upload-release-asset-workshop
+          uses: actions/upload-release-asset@v1
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          with:
+            upload_url: ${{ steps.create_release.outputs.upload_url }} 
+            asset_path: ./workshop01.pdf
+            asset_name: first-workshop.pdf
+            asset_content_type: pdf
